@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			input{
+				width: 50px;
+				height: 50px;
+			}
+			div{
+				width: 200px;
+				height: 100px;
+				background: orange;
+				vertical-align: top;
+				display: inline-block;
+				transition: 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" onmouseover="changeBox1()" onmouseout="changeBox2()" />
+		<div id="box1">
+			勾选表示同意
+		</div>
+		<div id="box2">
+			勾选表示同意
+		</div>
+		<script type="text/javascript">
+			function changeBox1(){
+				var oDiv=document.getElementById("box1")
+				oDiv.style.width='300px'
+				oDiv.style.height='200px'
+				oDiv.style.background='yellowgreen'
+			}
+			function changeBox2(){
+				var oDiv=document.getElementById("box2")
+				oDiv.style.width='100px'
+				oDiv.style.height='200px'
+				oDiv.style.background='teal'
+			}
+		</script>
+	</body>
+</html>

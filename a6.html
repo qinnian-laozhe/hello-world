@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				transition: 0.5s;
+			}
+			div{
+				width: 400px;
+				height: 260px;
+				background: steelblue;
+				margin: 100px auto;
+				border: 10px solid orange;
+				text-align: center;
+				border-radius: 10px;
+			}
+			video{
+				width: 100%;
+			}
+			button{
+				cursor: pointer;
+				border: none;
+				outline: none;
+				border-radius: 30px;
+				padding: 3px 8px;
+				margin-right: 10px;
+			}
+			button:hover{
+				background: plum;
+				color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<video src="sample.mp4" poster="sample.jpg" controls></video>
+			<button onclick="dayMode()">黑白切换</button>
+			<!-- <button onclick="nightMode()">夜间模式</button> -->
+		</div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById("box")
+			function dayMode(){
+				if(document.body.style.background=='white'){
+				document.body.style.background='black'
+				oDiv.style.background='orangered'
+				oDiv.style.borderColor='yellowgreen'
+				}else{
+				document.body.style.background='white'
+				oDiv.style.background='steelblue'
+				oDiv.style.borderColor='orange'
+					
+				}
+			}
+		</script>
+	</body>
+</html>
